@@ -4,7 +4,7 @@ Angular-JS
 All my Angular-JS learning projects. Incuding projects from ng-book
 
 
-Progress on ng-book so far:
+Progress on ng-book so far: TEST
 
 29/06/2014
 Completed 'Introduction to Directives'
