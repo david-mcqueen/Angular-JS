@@ -7,6 +7,10 @@ All my Angular-JS learning projects. Incuding projects from ng-book
 Progress on ng-book so far:
 
 29/06/2014
+Part way through 'Built in Directives'
+upto ng-include p90
+
+29/06/2014
 Completed 'Introduction to Directives'
 About to start on 'Built In Directives' p81
 
