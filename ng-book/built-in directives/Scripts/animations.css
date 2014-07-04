@@ -30,3 +30,16 @@
 .animate-switch.ng-enter.ng-enter-active {
     top:0;
 }
+
+
+
+/*
+            Non animation CSS
+*/
+.odd{
+    background-color: blue;
+}
+
+.even{
+    background-color: red;
+}

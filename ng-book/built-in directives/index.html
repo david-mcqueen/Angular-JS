@@ -11,16 +11,19 @@
 </head>
 <body>
 <div ng-app="myApp">
+    <h3>ng-disabled</h3>
     <h1>ng-disabled until text is entered</h1>
     <input type="text" ng-model="someProperty" placeholder="Type to enable the button"/>
     <button ng-model="button" ng-disabled="!someProperty">A Button</button>
 
     <br/>
     <br/>
+    <h3>ng-disabled binded to a controller</h3>
     <h1>Disable text area for <i>x</i> amount of time</h1>
     <textarea ng-disabled="isDisabled">Wait 5 seconds</textarea>
     <br/>
     <br/>
+    <h3>ng-readonly</h3>
     Type here to make sibling readonly:
     <input type="text" ng-model="newProperty">
     <br/>
@@ -29,6 +32,7 @@
            value="Some text here" />
     <br/>
     <br/>
+    <h3>ng-checked & ng-init</h3>
     <label>checkedProperty = {{ checkedProperty }}</label>
     <input type="checkbox"
            ng-checked="checkedProperty"
@@ -44,6 +48,7 @@
 
     <br/>
     <br/>
+    <h3>ng-selected & ng-model</h3>
     <label>Select two fish:</label>
     <input type="checkbox"
            ng-model="isTwoFish"/>
@@ -55,6 +60,7 @@
 
     <br/>
 
+    <h3>ng-href</h3>
     <!-- Always use ng-href when href includes an {{ expression }} -->
     <a ng-href="{{myHref}}">I'm feeling lucky when I load</a>
     <br/>
@@ -63,7 +69,7 @@
     <br/>
     <br/>
 
-
+    <h3>ng-click & data binding / models</h3>
     <div ng-controller="SomeController">
         {{ someModel.someValue }}
         <button ng-click="someAction()">Communicate to child</button>
@@ -76,6 +82,7 @@
     <br/>
     <br/>
 
+    <h3>ng-switch</h3>
     <input type="text" ng-model="person.name"/>
     <div ng-switch on="person.name">
         <p ng-switch-default>And the winner is...</p>
@@ -94,11 +101,56 @@
             <div class="animate-switch" ng-switch-default>default</div>
         </div>
     </div>
+    <br/>
+    <br/>
 
+
+    <h3>ng-if</h3>
+    <p>ng-if creates a clone of the element.
+        So if the expression is false, and then equates to true the element will be a fresh copy of the parent.
+        If it is true, then gets modified via something such as jQuery, and then equates to false.
+        Next time it equates to true, the modifications wont be present.</p>
+    <div ng-if="2+2 === 5">
+        Won't see this DOM node, not even in the source code
+    </div>
+
+    <div ng-if="2+2 === 4">
+        Hi, I do exist
+    </div>
+
+    <br/>
+    <br/>
+
+    <h3>hg-show / ng-hide</h3>
+    <div ng-show="2 + 2 ==5">
+        2 + 2 isnt 5, so dont show
+    </div>
+
+    <div ng-show="2 + 2 == 4">
+        2 + 2 is 4, do show
+    </div>
+
+    <div ng-hide="2 + 2 == 5">
+        2 + 2 isnt 5, don't hide
+    </div>
+
+    <div ng-hide="2 + 2 == 4">
+        2 + 2 is 4, do hide
+    </div>
+    <br/>
+    <br/>
+
+    <h3>ng-repeat & $even / $odd</h3>
+    <ul ng-controller="PeopleController">
+        <li ng-repeat="person in people" ng-class="{even: !$even, odd: !$odd}">
+            {{  person.name  }} lives in {{person.city}}
+        </li>
+    </ul>
 
 
     <br/>
     <br/>
+    <h3>ng-src</h3>
     <h3>Wrong way</h3>
     <img src="{{imgSrc}}"/>
     <br/>

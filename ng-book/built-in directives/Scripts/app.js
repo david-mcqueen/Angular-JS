@@ -23,10 +23,18 @@ app.controller('SomeController', function($scope) {
         $scope.someModel.someValue = 'hello human, from parent';
     };
 })
-.controller('ChildController', function($scope){
+    .controller('ChildController', function($scope){
         $scope.childAction = function(){
             $scope.someModel.someValue = 'hello human, from child';
         };
+})
+    .controller('PeopleController', function($scope){
+        $scope.people = [
+            {name: "Ari", city: "San Francisco"},
+            {name: "Erik", city: "Seattle"},
+            {name: "Dave", city: "Manchester"},
+            {name: "Sophie", city: "Manchester"}
+        ];
 });
 
 
@@ -34,3 +42,4 @@ function Ctrl($scope) {
     $scope.items = ['settings', 'home', 'other'];
     $scope.selection = $scope.items[0];
 }
+
