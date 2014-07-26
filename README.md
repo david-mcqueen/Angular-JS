@@ -6,6 +6,10 @@ All my Angular-JS learning projects. Incuding projects from ng-book
 
 Progress on ng-book so far:
 
+26/07/2014
+Finished Routes, page 151 of the book.
+Used an example from the internet as I couldn't get the one in the book to work properly
+
 29/06/2014
 Part way through 'Built in Directives'
 upto ng-include p90

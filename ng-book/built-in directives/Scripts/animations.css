@@ -43,3 +43,15 @@
 .even{
     background-color: red;
 }
+
+input.ng-invalid {
+    border: 1px solid red;
+}
+
+input.ng-valid{
+    border:1px solid green;
+}
+
+.red {
+    background-color: red;
+}
