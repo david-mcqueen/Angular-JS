@@ -1,40 +1,35 @@
-/**
- * Created by Dave on 20/06/2014.
- */
+var app = angular.module('ngRouteExample', ['ngRoute'])
 
-var app = angular.module('app', []);
 
-app.factory('ContactList', function(){
-    var ContactList = {};
-    ContactList.contact = [
-        {
-            name:"Robert Downey Jr.",
-            character:"Tony Stark / Iron Man"
-        },
-        {
-            name:"David McQueen",
-            character:"Student"
-        },
-        {
-            name:"Craig Foden",
-            character:"Student"
-        },
-        {
-            name:"Craig Roddy",
-            character:"Student"
-        },
-        {
-            name:"Paul Lombard",
-            character:"Cat"
-        },
-        {
-            name:"Bruce",
-            character:"Dog"
-        }
-    ];
-    return ContactList;
-})
 
-app.controller('ContactsController', function($scope, ContactList){
-    $scope.contactList = ContactList;
-});
+    .config(function($routeProvider, $locationProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'templates/home.html',
+                controller: 'HomeController'
+            })
+            .when('/Company/:bookId', {
+                templateUrl: 'templates/company.html',
+                controller: 'CompanyController',
+//                resolve: {
+//                    // I will cause a 1 second delay
+//                    delay: function($q, $timeout) {
+//                        var delay = $q.defer();
+//                        $timeout(delay.resolve, 1000);
+//                        return delay.promise;
+//                    }
+//                }
+            })
+            .when('/Book/:bookId/ch/:chapterId', {
+                templateUrl: 'templates/chapter.html',
+                controller: 'ChapterController'
+            })
+            .when('/Book/:bookId/ch/:chapterId/Paragraph/:paragraphId', {
+                templateUrl: 'templates/paragraph.html',
+                controller: 'ParagraphController'
+            })
+            .otherwise({redirectTo: '/'});
+
+        // configure html5 to get links working on jsfiddle
+        $locationProvider.html5Mode(true);
+    });

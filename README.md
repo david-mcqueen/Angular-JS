@@ -9,6 +9,7 @@ Progress on ng-book so far:
 26/07/2014
 Finished Routes, page 151 of the book.
 Used an example from the internet as I couldn't get the one in the book to work properly
+https://docs.angularjs.org/api/ngRoute/service/$route
 
 29/06/2014
 Part way through 'Built in Directives'
