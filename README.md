@@ -6,6 +6,11 @@ All my Angular-JS learning projects. Incuding projects from ng-book
 
 Progress on ng-book so far:
 
+29/07/2014
+Part way through Services. Which are proving to be a bit of a pain, but I managed to get them working in the end.
+The service declaration and usage is CASE SENSITIVE!
+Up to page 167 - Options for Creating Services
+
 26/07/2014
 Finished Routes, page 151 of the book.
 Used an example from the internet as I couldn't get the one in the book to work properly

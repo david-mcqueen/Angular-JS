@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services</title>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+</head>
+<body ng-app="myApp">
+<div ng-controller="ServiceController">
+    <label for="username">
+        Type in a GitHub username:
+    </label>
+    <input type="text"
+           ng-model="username"
+           placeholder="Enter a GitHub username" />
+    <ul>
+        <li ng-repeat="event in events">
+            <!--
+                event.actor and event.repo are returned by the GitHub API.
+                To view the raw API, uncomment the next line
+                -->
+            <!-- {{ event | json }} -->
+            {{ event.actor.login }} {{event.repo.name }}
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
