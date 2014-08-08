@@ -2,8 +2,6 @@
  * Created by Dave on 29/07/2014.
  */
 
-//var app = angular.module('myApp', ['myApp.services', 'myApp']);
-
 
 var myApp = angular.module('myApp', [])
     .factory('githubService', function($http) {
