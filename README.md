@@ -6,6 +6,9 @@ All my Angular-JS learning projects. Incuding projects from ng-book
 
 Progress on ng-book so far:
 
+08/08/2014
+Part way through the 'Communicating with the ourside world' section. P191
+
 29/07/2014
 Part way through Services. Which are proving to be a bit of a pain, but I managed to get them working in the end.
 The service declaration and usage is CASE SENSITIVE!
